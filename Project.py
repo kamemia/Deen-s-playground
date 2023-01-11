@@ -36,7 +36,7 @@ def reccomend():
       print("Have fun! :)")
 reccomend()
 Seinen.append("Death Note")
-Retry = input("Didn't like the recommended manga?" /n "Would you like to try again?, Press Y if yes: ")
+Retry = input("Didn't like the recommended manga? \nWould you like to try again?, Press Y if yes: ")
 if Retry == "Y":
       reccomend()
 else:
