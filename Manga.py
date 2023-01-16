@@ -1,17 +1,10 @@
-#Automating my manga read list
-#First to list all the manga I have not read or finished
-
 from random import shuffle
 import random
 from secrets import choice
 import time
 
 print("Hello there,Welcome to my manga recommender :)")
-manga  =[ 'Akumetsu', 'Black clover', 'Dandadan', 'Dorehedoro', 'Fire Punch', 'Jagaaan', 'Asura', 'Kingdom', 'Mashle', 'Monster', 'Record of Ragnarok ', 'GOH', 'Vagabond', 'Tokyo Revengers']
-
-# lets kick it up  a notch shall we?
-# we will group them into manhua and manga , started and never touched based on my read history
-# call anilist api and sort based on genre
+# manga  =[ 'Akumetsu', 'Black clover', 'Dandadan', 'Dorehedoro', 'Fire Punch', 'Jagaaan', 'Asura', 'Kingdom', 'Mashle', 'Monster', 'Record of Ragnarok ', 'GOH', 'Vagabond', 'Tokyo Revengers']
 Seinen = ['Kingdom', 'Monster', 'Record of Ragnarok', 'Tokyo Revengers', 'GOH', 'Dorehedoro', 'Asura']
 Shonen = ['Jagaaan', 'Mashle', 'Akumetsu', 'Predator', 'Boxer', 'Red Storm', 'Dandadan']
 Hentai = "I AM DISSAPOINTED IN YOU!"
