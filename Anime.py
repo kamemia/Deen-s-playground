@@ -1,26 +1,35 @@
 import json
-
+import random
 file= open("Anime.Json").read()
 data = json.loads(file)
+# use list index 
 
-def anime():
-    for details in data:
-    # print(details)
-    
-        genres = details.get('genres')
-        title = details.get('title')
-        studio = details.get('studio')
-        rating = details.get('hype')
-        desc = details.get('description')
-        return details    
-    
+for details in data:
+    stud = details.get('studio')
+    genre = details.get('genres')
+    title = details.get('title')    
+    desc = details.get('description')
+    rating = details.get('hype')
+ 
 def recommend():
-    
     pref = input("Would you like to watch based on genre, studio or anime rating?\n(Select One): ")
+    if pref == "studio":
+        pick= input("Studio Name: \n")
+        for choice in data:
+            studio = choice.get('studio')
+            if studio == pick:
+                print(studio,genre,title,desc, rating)
+                break
+    # categorize rating
     if pref == "genre":
-        genre= input("Input genre prefference: \n")
-        print()
-        if genre :
-            print()
+        gen = input("Genre: \n")
+        for opt in data:
+            genres = opt.get('genres')
+            for g in genres:
+                if g == gen:
+                    print(stud,genre,title,desc,rating)
+                    break
+
+recommend()            
     
-recommend()    
+   
