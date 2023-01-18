@@ -22,13 +22,13 @@ def recommend():
                 break
     # categorize rating
     if pref == "genre":
+        print("-----------Still in Dev--------------")
         gen = input("Genre: \n")
         for opt in data:
-            for sel in opt['genres']:
-                if gen in sel:
-                    print(stud,genre,title,desc,rating)
-                    break
-
+            slct = opt.get('genres')
+            print(slct)
+            # match if gen is in range of element in list(slct)                
+                
 recommend()            
     
    
