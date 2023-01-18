@@ -24,9 +24,8 @@ def recommend():
     if pref == "genre":
         gen = input("Genre: \n")
         for opt in data:
-            genres = opt.get('genres')
-            for g in genres:
-                if g == gen:
+            for sel in opt['genres']:
+                if gen in sel:
                     print(stud,genre,title,desc,rating)
                     break
 
