@@ -10,16 +10,18 @@ for details in data:
     title = details.get('title')    
     desc = details.get('description')
     rating = details.get('hype')
- 
 def recommend():
     pref = input("Would you like to watch based on genre, studio or anime rating?\n(Select One): ")
     if pref == "studio":
         pick= input("Studio Name: \n")
         for choice in data:
             studio = choice.get('studio')
-            if studio == pick:
-                print(studio,genre,title,desc, rating)
-                break
+            genre = choice.get('genres')
+            title = choice.get('title')
+            desc = choice.get('description')
+            if pick == studio:
+                print(studio,genre,title,desc)
+                
     # categorize rating
     if pref == "genre":
         print("-----------Still in Dev--------------")
